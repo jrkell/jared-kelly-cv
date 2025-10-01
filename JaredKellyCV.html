@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jared Kelly - Software Engineer</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="dark.css" id="theme-stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="terminal-header">
+            <span>jared@dev:~/cv$ ./resume.sh --format=detailed</span>
+            <div class="terminal-buttons">
+                <span class="btn theme-toggle" onclick="toggleTheme()">☀/☾</span>
+                <span class="btn">-</span>
+                <span class="btn">□</span>
+                <span class="btn">×</span>
+            </div>
+        </div>
+        
+        <header class="header">
+            <div class="ascii-art">
+     ██╗ █████╗ ██████╗ ███████╗██████╗     ██╗  ██╗███████╗██╗     ██╗  ██╗   ██╗
+     ██║██╔══██╗██╔══██╗██╔════╝██╔══██╗    ██║ ██╔╝██╔════╝██║     ██║  ╚██╗ ██╔╝
+     ██║███████║██████╔╝█████╗  ██║  ██║    █████╔╝ █████╗  ██║     ██║   ╚████╔╝ 
+██   ██║██╔══██║██╔══██╗██╔══╝  ██║  ██║    ██╔═██╗ ██╔══╝  ██║     ██║    ╚██╔╝  
+╚█████╔╝██║  ██║██║  ██║███████╗██████╔╝    ██║  ██╗███████╗███████╗███████╗██║   
+ ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═════╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝   
+            </div>
+            <h1>---------- Software Engineer ----------</h1>
+            <div class="contact-info">
+                <a href="mailto:jared.r.kelly@gmail.com"><span>✉ jared.r.kelly@gmail.com</span></a>
+                <a href="tel:+31627466765"><span>☏ +316 2746 6765</span></a>
+                <a href="https://linkedin.com/in/jaredkelly"><span>☍ linkedin.com/in/todo</span></a>
+                <!-- <span>github.com/jaredrkelly</span> -->
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>> Summary</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non facilis autem quisquam aut perferendis aspernatur. Accusamus rerum ab incidunt facilis, officiis, illum iste velit deserunt rem repellendus laudantium soluta inventore!</p>
+        </section>
+
+        <section class="section">
+            <h2>> Experience</h2>
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Software Engineer</div>
+                        <div class="company">Tech Company Inc.</div>
+                    </div>
+                    <div class="date">2022 - Present</div>
+                </div>
+                <ul>
+                    <li>Developed and maintained scalable web applications using modern frameworks</li>
+                    <li>Collaborated with cross-functional teams to deliver high-quality software solutions</li>
+                    <li>Mentored junior developers and conducted code reviews</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Software Developer</div>
+                        <div class="company">Previous Company LLC</div>
+                    </div>
+                    <div class="date">2020 - 2022</div>
+                </div>
+                <ul>
+                    <li>Built responsive web interfaces using HTML, CSS, and JavaScript</li>
+                    <li>Implemented RESTful APIs and database integrations</li>
+                    <li>Participated in agile development processes</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">MongoDB</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="degree"> todo align formatting Bachelor of Information Technology</div>
+                <div class="institution">Royal Melbourne Institute of Technology • 2016-2019</div>
+                <div>Major in Internet Design</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const themeStylesheet = document.getElementById('theme-stylesheet');
+            const currentTheme = themeStylesheet.getAttribute('href');
+            
+            if (currentTheme === 'dark.css') {
+                themeStylesheet.setAttribute('href', 'light.css');
+                localStorage.setItem('theme', 'light');
+                return;
+            } 
+            
+            themeStylesheet.setAttribute('href', 'dark.css');
+            localStorage.setItem('theme', 'dark');
+        }
+
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            const themeStylesheet = document.getElementById('theme-stylesheet');
+            themeStylesheet.setAttribute('href', savedTheme + '.css');
+        });
+    </script>
+</body>
+</html>
