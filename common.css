@@ -118,15 +118,9 @@ h3 {
     font-size: 0.85rem;
 }
 
-/* .contact-info span::before {
-    content: ":: ";
-    color: var(--aqua-dim);
-} */
-
 .contact-info span:hover {
     background-color: var(--bg3);
     border-color: var(--fg2);
-    /* color: var(--yellow); */
 }
 
 .contact-info a:hover {
